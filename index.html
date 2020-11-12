@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <style>
+        .center{
+            position: absolute;
+            top: 50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+
+        }
+        .aadhaar-input{
+            background: #eee;
+            height: 40px;
+            width: 200px;
+            border: 1px solid #eee;
+            outline:none;
+            border-radius: 5px;
+            padding: 0 8px;
+        }
+        .aadhaar-input:focus{
+            background: #fff;
+            border: 1px solid palevioletred;
+        }
+        .btn{
+            color: #fff;
+            background: palevioletred;
+            height: 40px;
+            border: 1px solid palevioletred;
+            outline:none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .note{
+            font-size: 10px;
+            color: rgb(156, 156, 156);
+            padding: 2px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+        <input class="aadhaar-input" type="tel" maxlength="14" id="aadhaar"  autocomplete="off"/>
+        <button class="btn" onclick="displayVal()">Show Value</button>
+        <div class="note">Only number are allowed!</div>
+    </div>
+    <script src="masking.js"></script>
+  </body>
+</html>
